@@ -15,7 +15,7 @@ export class AppComponent {
   }
 
   public getHello(){
-    return this.service.getHello();
+    return JSON.stringify(this.service.getHello());
   }
 
   public getArray() {

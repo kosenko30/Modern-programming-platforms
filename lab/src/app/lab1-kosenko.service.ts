@@ -26,14 +26,30 @@ export class Lab1KosenkoService {
     return (a > b) ? a : b;
   }
 
-  getHello(): string {
-    const a = 45;
-    const b = -75;
-    return "Lab 3 result: " + Lab1KosenkoService.getBiggerNumber(a, b).toString();
+  getHello(): Person {
+    const person = new Person("Ann", "Doroshenko", "+380688455813", new Date("2003-05-21"), "Ukraine");
+    return person;
   }
 }
 
 enum Role{
   Admin,
   User
+}
+
+// Lab4
+export class Person {
+  firstName: string;
+  lastName: string;
+  phoneNumber: string;
+  birthday: Date;
+  birthCountry: string;
+
+  constructor(firstName: string, lastName: string, phoneNumber: string, birthday: Date, birthCountry: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.phoneNumber = phoneNumber;
+    this.birthday = birthday;
+    this.birthCountry = birthCountry;
+  }
 }
